@@ -37,7 +37,7 @@ public class Intro extends JFrame {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				new Player();
+				new Frame();
 				setVisible(false); // 창 안보이게 하기
 			}
 		});

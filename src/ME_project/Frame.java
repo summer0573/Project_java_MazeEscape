@@ -1,5 +1,6 @@
 package ME_project;
 
+import java.awt.Color;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
@@ -23,7 +24,7 @@ public class Frame extends JFrame {
 	}
 
 	public void initObject() {
-		backgroundMap = new JLabel(new ImageIcon("./image/asdf.png"));
+		backgroundMap = new JLabel(new ImageIcon("./image/asdf2.png"));
 		setContentPane(backgroundMap);
 
 		player = new Player();
@@ -33,7 +34,9 @@ public class Frame extends JFrame {
 	public void initSetting() { // 프레임 실행
 		setSize(1500, 800);
 		setLayout(null);
+		setBackground(Color.WHITE);
 		setLocationRelativeTo(null); // 가운데 위치
+		setResizable(false);//창 크기 고정
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	}
 
@@ -41,7 +44,6 @@ public class Frame extends JFrame {
 		addKeyListener(new KeyAdapter() {
 			@Override
 			public void keyPressed(KeyEvent e) {
-				System.out.println(e.getKeyCode());
 				switch (e.getKeyCode()) {
 				case KeyEvent.VK_LEFT:
 					player.left();

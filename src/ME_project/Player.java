@@ -12,14 +12,17 @@ public class Player extends JLabel implements Moveable {
 	boolean up;
 	boolean down;
 
-	ImageIcon player;
+	ImageIcon playerR, playerL, player;
 
 	public Player() {
 		initObject();
 		initSetting();
+		initBackgroundPlayerService();
 	}
 
 	public void initObject() {
+//		playerR = new ImageIcon("./image/playerTest2R.png");
+//		playerL = new ImageIcon("./image/playerTest2L.png");
 		player = new ImageIcon("./image/playerTest.png");
 	}
 
@@ -33,23 +36,25 @@ public class Player extends JLabel implements Moveable {
 		down = false;
 
 		setIcon(player);
+		//setSize(390, 419);
 		setSize(50, 50);
 		setLocation(x, y);
 	}
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		
+	public void initBackgroundPlayerService() {
+		new Thread(new BackgroundPlayerService(this)).start();
 	}
 
 	@Override
 	public void left() {
+		setIcon(player);
 		x -= 10;
 		setLocation(x, y);
 	}
 
 	@Override
 	public void right() {
+		setIcon(player);
 		x += 10;
 		setLocation(x, y);
 	}
@@ -64,6 +69,11 @@ public class Player extends JLabel implements Moveable {
 	public void down() {
 		y += 10;
 		setLocation(x, y);
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
 	}
 
 }

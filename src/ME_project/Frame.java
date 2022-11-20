@@ -42,20 +42,48 @@ public class Frame extends JFrame {
 
 	public void initListner() {
 		addKeyListener(new KeyAdapter() {
+			
+			//키보드를 눌렀을 시 발생 이벤트
 			@Override
 			public void keyPressed(KeyEvent e) {
 				switch (e.getKeyCode()) {
 				case KeyEvent.VK_LEFT:
-					player.left();
+					if(!player.isLeft()) {
+						player.left();
+					}
 					break;
 				case KeyEvent.VK_RIGHT:
-					player.right();
+					if(!player.isRight()) {
+						player.right();
+					}
 					break;
 				case KeyEvent.VK_UP:
-					player.up();
+					if(!player.isUp()) {
+						player.up();
+					}
 					break;
 				case KeyEvent.VK_DOWN:
-					player.down();
+					if(!player.isDown()) {
+						player.down();
+					}
+					break;
+				}
+			}
+			//키보드 해제 이벤트
+			@Override
+			public void keyReleased(KeyEvent e) {
+				switch (e.getKeyCode()) {
+				case KeyEvent.VK_LEFT:
+					player.setLeft(false);
+					break;
+				case KeyEvent.VK_RIGHT:
+					player.setRight(false);
+					break;
+				case KeyEvent.VK_UP:
+					player.setUp(false);
+					break;
+				case KeyEvent.VK_DOWN:
+					player.setDown(false);
 					break;
 				}
 			}

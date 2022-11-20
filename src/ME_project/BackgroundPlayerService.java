@@ -30,11 +30,7 @@ public class BackgroundPlayerService implements Runnable {
 			Color rightColor = new Color(image.getRGB(player.getX() + 40, player.getY() + 25));
 			Color upColor = new Color(image.getRGB(player.getX() + 25, player.getY() + 20));
 			Color downColor = new Color(image.getRGB(player.getX() + 25, player.getY() + 80));
-//			System.out.println("leftColor 색상 : " + leftColor);
-//			System.out.println("rightColor 색상 : " + rightColor);
-//			System.out.println("upColor 색상 : " + upColor);
-//			System.out.println("downColor 색상 : " + downColor);
-
+			
 			if (leftColor.getRed() == 0 && leftColor.getGreen() == 0 && leftColor.getBlue() == 0) {
 				System.out.println("왼쪽 벽에 충돌");
 			} else if (rightColor.getRed() == 0 && rightColor.getGreen() == 0 && rightColor.getBlue() == 0) {

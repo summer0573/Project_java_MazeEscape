@@ -24,7 +24,7 @@ public class Frame extends JFrame {
 	}
 
 	public void initObject() {
-		backgroundMap = new JLabel(new ImageIcon("./image/asdf2.png"));
+		backgroundMap = new JLabel(new ImageIcon("./image/asdf3.png"));
 		setContentPane(backgroundMap);
 
 		player = new Player();
@@ -48,22 +48,22 @@ public class Frame extends JFrame {
 			public void keyPressed(KeyEvent e) {
 				switch (e.getKeyCode()) {
 				case KeyEvent.VK_LEFT:
-					if(!player.isLeft()) {
+					if(!player.isLeft() && !player.isLeftWallCrash()) {
 						player.left();
 					}
 					break;
 				case KeyEvent.VK_RIGHT:
-					if(!player.isRight()) {
+					if(!player.isRight() && !player.isRightWallCrash()) {
 						player.right();
 					}
 					break;
 				case KeyEvent.VK_UP:
-					if(!player.isUp()) {
+					if(!player.isUp() && !player.isUpWallCrash()) {
 						player.up();
 					}
 					break;
 				case KeyEvent.VK_DOWN:
-					if(!player.isDown()) {
+					if(!player.isDown() && !player.isDownWallCrash()) {
 						player.down();
 					}
 					break;

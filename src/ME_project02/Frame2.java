@@ -1,4 +1,4 @@
-package ME_project;
+package ME_project02;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
@@ -12,13 +12,13 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 
-public class Frame extends JFrame {
+public class Frame2 extends JFrame {
 
 	JLabel backgroundMap;
 	Player player;
 
 
-	public Frame() {
+	public Frame2() {
 		initObject();
 		initSetting();
 		initListner();
@@ -95,6 +95,6 @@ public class Frame extends JFrame {
 	}
 
 	public static void main(String[] args) {
-		new Frame();
+		new Frame2();
 	}
 }

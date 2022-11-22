@@ -1,4 +1,4 @@
-package ME_project;
+package ME_project02;
 
 import java.awt.FlowLayout;
 import javax.swing.ImageIcon;

@@ -1,22 +1,22 @@
-package ME_project;
+package ME_project02;
 
 import java.awt.Color;
 import java.awt.Image;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.nio.Buffer;
+
 import javax.imageio.ImageIO;
 
 public class BackgroundPlayerService implements Runnable {
 
 	BufferedImage image;
 	Player player;
-	clearFrame CF;
 
 	public BackgroundPlayerService(Player player) {
 		this.player = player;
 		try {
-			image = ImageIO.read(new File("./image/asdf1.png"));
+			image = ImageIO.read(new File("./image/asdf.png"));
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
 		}
@@ -30,7 +30,7 @@ public class BackgroundPlayerService implements Runnable {
 			Color rightColor = new Color(image.getRGB(player.getX() + 40, player.getY() + 25));
 			Color upColor = new Color(image.getRGB(player.getX() + 25, player.getY() + 20));
 			Color downColor = new Color(image.getRGB(player.getX() + 25, player.getY() + 80));
-
+			
 			if (leftColor.getRed() == 0 && leftColor.getGreen() == 0 && leftColor.getBlue() == 0) {
 				System.out.println("¿ÞÂÊ º®¿¡ Ãæµ¹");
 				player.setLeftWallCrash(true);
@@ -47,7 +47,7 @@ public class BackgroundPlayerService implements Runnable {
 				System.out.println("¾Æ·¡ÂÊ º®¿¡ Ãæµ¹");
 				player.setDownWallCrash(true);
 				player.setDown(false);
-			} else {
+			}else {
 				player.setLeftWallCrash(false);
 				player.setRightWallCrash(false);
 				player.setUpWallCrash(false);
@@ -58,30 +58,6 @@ public class BackgroundPlayerService implements Runnable {
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
-
-			if (leftColor.getRed() == 100 && leftColor.getGreen() == 100 && leftColor.getBlue() == 100) {
-				System.out.println("LµµÂø");
-				CF = new clearFrame();
-				break;
-			} else if (rightColor.getRed() == 100 && rightColor.getGreen() == 100 && rightColor.getBlue() == 100) {
-				System.out.println("RµµÂø");
-				CF = new clearFrame();
-				break;
-			} else if (upColor.getRed() == 100 && upColor.getGreen() == 100 && upColor.getBlue() == 100) {
-				System.out.println("UµµÂø");
-				CF = new clearFrame();
-				break;
-			} else if (downColor.getRed() == 100 && downColor.getGreen() == 100 && downColor.getBlue() == 100) {
-				System.out.println("DµµÂø");
-				CF = new clearFrame();
-				break;
-			}
-			try {
-				Thread.sleep(10);
-			} catch (InterruptedException e) {
-				e.printStackTrace();
-			}
-
 		}
 
 	}

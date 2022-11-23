@@ -12,6 +12,7 @@ public class BackgroundPlayerService implements Runnable {
 	BufferedImage image;
 	Player player;
 	clearFrame CF;
+	
 
 	public BackgroundPlayerService(Player player) {
 		this.player = player;

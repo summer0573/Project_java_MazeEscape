@@ -1,4 +1,4 @@
-package ME_project02;
+package ME_project04;
 
 import java.awt.Color;
 import java.awt.Image;
@@ -8,13 +8,11 @@ import java.nio.Buffer;
 
 import javax.imageio.ImageIO;
 
-import ME_project03.clearFrame3;
-
 public class BackgroundPlayerService implements Runnable {
 
 	BufferedImage image;
 	Player player;
-	clearFrame2 CF2;
+	clearFrame4 CF4;
 
 	public BackgroundPlayerService(Player player) {
 		this.player = player;
@@ -61,22 +59,22 @@ public class BackgroundPlayerService implements Runnable {
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
-
+			
 			if (leftColor.getRed() == 100 && leftColor.getGreen() == 100 && leftColor.getBlue() == 100) {
 				System.out.println("LµµÂø");
-				CF2 = new clearFrame2();
+				CF4 = new clearFrame4();
 				break;
 			} else if (rightColor.getRed() == 100 && rightColor.getGreen() == 100 && rightColor.getBlue() == 100) {
 				System.out.println("RµµÂø");
-				CF2 = new clearFrame2();
+				CF4 = new clearFrame4();
 				break;
 			} else if (upColor.getRed() == 100 && upColor.getGreen() == 100 && upColor.getBlue() == 100) {
 				System.out.println("UµµÂø");
-				CF2 = new clearFrame2();
+				CF4 = new clearFrame4();
 				break;
 			} else if (downColor.getRed() == 100 && downColor.getGreen() == 100 && downColor.getBlue() == 100) {
 				System.out.println("DµµÂø");
-				CF2 = new clearFrame2();
+				CF4 = new clearFrame4();
 				break;
 			}
 			try {

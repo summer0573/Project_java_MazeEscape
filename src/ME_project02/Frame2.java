@@ -27,7 +27,7 @@ public class Frame2 extends JFrame {
 	}
 
 	public void initObject() {
-		backgroundMap = new JLabel(new ImageIcon("./image/asdf2.png"));
+		backgroundMap = new JLabel(new ImageIcon("./image/asdf3.png"));
 		setContentPane(backgroundMap);
 
 		player = new Player();
@@ -36,6 +36,7 @@ public class Frame2 extends JFrame {
 	
 
 	public void initSetting() { // 프레임 실행
+		setTitle("Maze Escape"); // 타이틀
 		setSize(1500, 800);
 		setLayout(null);
 		setBackground(Color.WHITE);

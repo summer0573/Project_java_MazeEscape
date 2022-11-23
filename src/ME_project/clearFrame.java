@@ -17,9 +17,9 @@ import javax.swing.WindowConstants;
 import ME_project02.Frame2;
 
 public class clearFrame extends JFrame {
-	ImageIcon continueBtn = new ImageIcon("./Image/start.png");
-	Image clearImg = new ImageIcon("./Image/logo.png").getImage();
-	Frame2 F;
+	ImageIcon continueBtn = new ImageIcon("./Image/next.png");
+	Image clearImg = new ImageIcon("./Image/clear.png").getImage();
+	Frame2 F2;
 
 	public clearFrame() {
 		initSetting();
@@ -41,13 +41,12 @@ public class clearFrame extends JFrame {
 		setVisible(true);
 
 		IntBtn.addActionListener(new ActionListener() {
-			public void actionPerformed2(ActionEvent arg0) {
+			public void actionPerformed(ActionEvent arg0) {
 				dispose();
-			}
-
-			public void actionPerformed(ActionEvent e) {
-				F = new Frame2();
+				
+				F2 = new Frame2();
 				setVisible(false); // 창 안보이게 하기
+
 			}
 
 		});

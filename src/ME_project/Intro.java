@@ -43,10 +43,12 @@ public class Intro extends JFrame {
 	}
 
 	public void paint(Graphics g) {
-		g.drawImage(logo, 430, 50, null);// background¸¦ ±×·ÁÁÜ
+		g.drawImage(logo, 430, 100, null);// background¸¦ ±×·ÁÁÜ
 	}
 
 	public static void main(String[] args) {
 		new Intro();
+
+		 
 	}
 }

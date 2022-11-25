@@ -1,10 +1,10 @@
-package ME_project;
+package ME_project03;
 
 import java.awt.FlowLayout;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 
-public class Player extends JLabel implements Moveable {
+public class Player3 extends JLabel implements Moveable {
 
 	int x, y; // 위치 상태
 
@@ -97,7 +97,7 @@ public class Player extends JLabel implements Moveable {
 
 	ImageIcon playerR, playerL, player;
 
-	public Player() {
+	public Player3() {
 		initObject();
 		initSetting();
 		initBackgroundPlayerService();
@@ -125,7 +125,7 @@ public class Player extends JLabel implements Moveable {
 	}
 
 	public void initBackgroundPlayerService() {
-		new Thread(new BackgroundPlayerService1(this)).start();
+		new Thread(new BackgroundPlayerService3(this)).start();
 	}
 
 	@Override

@@ -47,6 +47,7 @@ public class Frame extends JFrame {
 		setLocationRelativeTo(null); // 가운데 위치
 		setResizable(false);// 창 크기 고정
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
 	}
 
 	public void initListner() {

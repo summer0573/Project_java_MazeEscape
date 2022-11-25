@@ -19,6 +19,7 @@ import ME_project02.Frame2;
 public class clearFrame extends JFrame {
 	ImageIcon continueBtn = new ImageIcon("./Image/next.png");
 	Image clearImg = new ImageIcon("./Image/clear.png").getImage();
+	Frame F;
 	Frame2 F2;
 
 	public clearFrame() {
@@ -43,7 +44,6 @@ public class clearFrame extends JFrame {
 		IntBtn.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				dispose();
-				
 				F2 = new Frame2();
 				setVisible(false); // 창 안보이게 하기
 

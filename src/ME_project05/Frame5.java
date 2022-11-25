@@ -15,7 +15,7 @@ import javax.swing.JLabel;
 public class Frame5 extends JFrame {
 
 	JLabel backgroundMap;
-	Player player;
+	Player5 player;
 
 
 	public Frame5() {
@@ -30,7 +30,7 @@ public class Frame5 extends JFrame {
 		backgroundMap = new JLabel(new ImageIcon("./image/asdf6.png"));
 		setContentPane(backgroundMap);
 
-		player = new Player();
+		player = new Player5();
 		add(player);
 	}
 	
